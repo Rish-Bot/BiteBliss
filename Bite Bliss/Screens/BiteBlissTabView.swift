@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+/// Welcomet to the BiteBlissTabView it holds all the important values you want to choose
+///>important: BiteBlissTabView works on your way.
 struct BiteBlissTabView : View {
     
+    @EnvironmentObject var order : Order
     
     var body: some View {
         
@@ -16,8 +19,9 @@ struct BiteBlissTabView : View {
             
             BBHomeView()
                 .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+                   
+                    Label("Home",systemImage: "house")
+                        
                 }
             
             BBAccountView()
@@ -30,6 +34,7 @@ struct BiteBlissTabView : View {
                 .tabItem {
                     Image(systemName: "bag")
                     Text("Order")
+                        .badge(order.item.count)
                 }
             
         }

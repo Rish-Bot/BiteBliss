@@ -6,3 +6,13 @@
 //
 
 import Foundation
+//User -> Data -> Appstorage
+struct User : Codable {
+    
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var birthDate = Date()
+    var toggleNapkins = false
+    var toggleRefill = false
+}

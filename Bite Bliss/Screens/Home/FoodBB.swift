@@ -9,9 +9,35 @@ import SwiftUI
 
 struct FoodBB: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            Image("logo page")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300)
+                .shadow(radius: 10)
+            Text("Enjoy Bite Bliss")
+                .fontWeight(.semibold)
+            
+            Button{
+                NavigationLink("c"){
+                    BBHomeView()
+                }
+                
+                print("tap working")
+            }label: {
+                Label("Place Order", image: "fork.knife.circle.fill")
+                    .frame(width: 350, height: 70)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.white)
+                    .background(.blue)
+                    .clipShape(RoundedRectangle(cornerSize:CGSize(width: 20, height: 10)))
+            }
+        }
+        
     }
 }
+
 
 #Preview {
     FoodBB()

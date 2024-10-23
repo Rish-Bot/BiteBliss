@@ -5,4 +5,9 @@
 //  Created by Hari on 13/10/23.
 //
 
-import Foundation
+import SwiftUI
+
+final class Order : ObservableObject {
+    
+    @Published var item : [BiteBliss] = []
+}

@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-
+/// <#Description#>
 final class BBViewModel : ObservableObject{
     
     @Published var BBArr : [BiteBliss] = []
+    /// <#Description#>
     @Published var alertItem : AlterItem?
     @Published var isLoading = false
     
+    /// <#Description#>
     func getBiteBliss(){
         isLoading = true
         
